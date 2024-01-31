@@ -7,6 +7,7 @@ public class temporizador : MonoBehaviour
 {
     public float timer = 0f;
     public Text textoTimer;
+    public GameObject game;
     void Update()
     {
         timer -= Time.deltaTime;
@@ -14,7 +15,8 @@ public class temporizador : MonoBehaviour
 
         if(timer <= 0f)
         {
-            Debug.Log("GAME OVER");
+            game.gameObject.SetActive(true);
+            timer = 0f;
         }
     }
 }

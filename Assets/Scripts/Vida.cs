@@ -21,7 +21,8 @@ public class Vida : MonoBehaviour
 
     private void Start()
     {
- 
+        move.enabled = false;
+
         Invoke("activar", 1.5f);
         Invoke("desactivar", 3.2f);
      
@@ -76,6 +77,6 @@ public class Vida : MonoBehaviour
     private void activar ()
     {
         Frase.gameObject.SetActive(true);
-        move.enabled = false;
+        
     }
 }
